@@ -1,4 +1,4 @@
-package com.airyance;
+package com.airyance.empleado.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,17 +9,24 @@ import java.time.LocalDate;
 @Setter
 public class Empleado {
 
-    private int id;
-    private int cedula;
+    private long cedula;
+    private String nombre;
     private int fotografia;
     private LocalDate fechaIngreso;
     private int cargo;
 
-    public Empleado(int cedula, int fotografia, LocalDate fechaIngreso, int cargo) {
+    public Empleado(long cedula,String nombre, int fotografia, LocalDate fechaIngreso, int cargo) {
         this.cedula = cedula;
+        this.nombre = nombre;
         this.fotografia = fotografia;
         this.fechaIngreso = fechaIngreso;
         this.cargo = cargo;
     }
 
+    public Empleado(String nombre, int fotografia, LocalDate fechaIngreso, int cargo) {
+        this.nombre = nombre;
+        this.fotografia = fotografia;
+        this.fechaIngreso = fechaIngreso;
+        this.cargo = cargo;
+    }
 }
