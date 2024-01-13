@@ -2,7 +2,9 @@ package com.airyance.evaluacion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan({ "com.airyance" })
 @SpringBootApplication
 public class EvaluacionApplication {
 
