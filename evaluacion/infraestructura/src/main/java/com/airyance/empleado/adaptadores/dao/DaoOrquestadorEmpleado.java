@@ -12,9 +12,14 @@ public class DaoOrquestadorEmpleado implements DaoEmpleado {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
-    private String sqlConsultarEmpleado="";
+    private String sqlConsultarEmpleado="SELECT e.id ,e.cedula, e.nombre, e.fotografia, e.fechaIngreso, c.descripcion AS descripcion_cargo\n" +
+            "FROM empleados e\n" +
+            "JOIN cargos c ON e.cargo = c.id\n" +
+            "WHERE e.cedula = :cedula;";
 
-    private String sqlListarEmpleados="";
+    private String sqlListarEmpleados="SELECT e.id ,e.cedula, e.nombre, e.fotografia, e.fechaIngreso, c.descripcion AS descripcion_cargo\n" +
+            "FROM empleados e\n" +
+            "JOIN cargos c ON e.cargo = c.id;";
     public DaoOrquestadorEmpleado(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }

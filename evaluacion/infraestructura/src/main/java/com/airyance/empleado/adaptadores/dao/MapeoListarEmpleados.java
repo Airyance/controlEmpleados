@@ -29,7 +29,7 @@ public class MapeoListarEmpleados implements ResultSetExtractor<List<DtoEmpleado
             empleado.setCedula(rs.getLong("cedula"));
             empleado.setFotografia(rs.getInt("fotografia"));
             empleado.setFechaIngreso(fechaIngreso);
-            empleado.setCargo(rs.getInt("cargo"));
+            empleado.setCargo(rs.getString("descripcion_cargo"));
 
             listaEmpleados.add(empleado);
         }

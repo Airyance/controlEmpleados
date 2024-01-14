@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "io.freefair.lombok" version "8.3"
 }
 
 group = 'com.airyance'
@@ -8,6 +9,9 @@ version = '0.0.1-SNAPSHOT'
 repositories {
     mavenCentral()
 }
+java {
+    sourceCompatibility = '17'
+}
 
 dependencies {
     implementation 'org.projectlombok:lombok:latest.release'
@@ -15,6 +19,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
+
 
 test {
     useJUnitPlatform()

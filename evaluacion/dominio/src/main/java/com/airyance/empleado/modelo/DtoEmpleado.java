@@ -18,7 +18,7 @@ public class DtoEmpleado {
     private String nombre;
     private int fotografia;
     private LocalDate fechaIngreso;
-    private int cargo;
+    private String cargo;
 
 
 }

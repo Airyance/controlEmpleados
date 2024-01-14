@@ -1,4 +1,4 @@
-CREATE TABLE evaluacionBD (
+CREATE TABLE empleados (
     id SERIAL PRIMARY KEY,
     cedula BIGINT NOT NULL UNIQUE,
     nombre VARCHAR(255),

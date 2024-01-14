@@ -14,14 +14,14 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/empleado")
+@RequestMapping("/empleados")
 public class ConsultaEmpleado {
 
     private ManejadorConsultarEmpleado manejadorConsultarEmpleado;
     private ManejadorListarEmpleados manejadorListarEmpleados;
 
     @GetMapping(value = "/{cedula}")
-    public Optional<DtoEmpleado> buscarEmpleadoPorCedula(@PathVariable int cedula) {
+    public Optional<DtoEmpleado> buscarEmpleadoPorCedula(@PathVariable Long cedula) {
         return manejadorConsultarEmpleado.ejecutar(cedula);
     }
 

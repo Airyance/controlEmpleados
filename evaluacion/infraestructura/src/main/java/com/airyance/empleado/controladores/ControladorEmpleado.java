@@ -31,7 +31,7 @@ public class ControladorEmpleado {
         return manejadorActualizarEmpleado.ejecutar(solicitudEmpleado, id);
     }
 
-    @DeleteMapping(value = "/eliminar")
+    @DeleteMapping(value = "/eliminar/{cedula}")
     private ResponseEntity<String> eliminarEmpleado(@PathVariable long cedula) {
         return new ResponseEntity<>(manejadorEliminarEmpleado.ejecutar(cedula), null, HttpStatus.OK);
     }

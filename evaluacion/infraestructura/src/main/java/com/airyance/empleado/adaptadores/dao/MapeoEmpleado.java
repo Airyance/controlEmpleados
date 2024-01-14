@@ -28,7 +28,7 @@ public class MapeoEmpleado implements ResultSetExtractor<DtoEmpleado> {
                     rs.getString("nombre"),
                     rs.getInt("fotografia"),
                     fechaIngreso,
-                    rs.getInt("cargo")
+                    rs.getString("descripcion_cargo")
             );
 
 

@@ -1,4 +1,4 @@
-package com.airyance.evaluacion;
+package com.airyance;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
