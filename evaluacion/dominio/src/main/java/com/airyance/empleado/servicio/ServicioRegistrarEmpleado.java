@@ -3,6 +3,7 @@ package com.airyance.empleado.servicio;
 import com.airyance.empleado.modelo.Empleado;
 import com.airyance.empleado.puerto.dao.DaoEmpleado;
 import com.airyance.empleado.puerto.repositorio.RepositorioEmpleado;
+import com.airyance.negocio.excepciones.ExcepcionRegistroExistente;
 
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ public class ServicioRegistrarEmpleado {
             var registrosPrevios = Optional.ofNullable(servicioConsultarEmpleado.ejecutar(empleado.getCedula()));
 
             if (registrosPrevios.isPresent()) {
-                throw new RuntimeException(YA_EXISTE_EL_EMPLEADO_A_REGISTRAR);
+                throw new ExcepcionRegistroExistente(YA_EXISTE_EL_EMPLEADO_A_REGISTRAR);
             }
             return creacionEmpleado(empleado);
         } catch (RuntimeException exception) {

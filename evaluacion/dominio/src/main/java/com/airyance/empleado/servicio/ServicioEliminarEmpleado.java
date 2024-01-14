@@ -2,6 +2,7 @@ package com.airyance.empleado.servicio;
 
 import com.airyance.empleado.modelo.DtoEmpleado;
 import com.airyance.empleado.puerto.repositorio.RepositorioEmpleado;
+import com.airyance.negocio.excepciones.ExcepcionInconsistenciaDatos;
 
 import java.util.Optional;
 
@@ -28,7 +29,7 @@ public class ServicioEliminarEmpleado {
 
                 return String.format(EL_EMPLEADO_HA_SIDO_ELIMINADO_CON_EXITO, resultado.get().getNombre());
             } else {
-                throw new RuntimeException(EL_EMPLEADO_A_ELIMINAR_NO_EXISTE);
+                throw new ExcepcionInconsistenciaDatos(EL_EMPLEADO_A_ELIMINAR_NO_EXISTE);
             }
 
         } catch (RuntimeException exception) {

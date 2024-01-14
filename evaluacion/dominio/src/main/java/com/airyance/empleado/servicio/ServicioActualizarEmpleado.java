@@ -3,6 +3,8 @@ package com.airyance.empleado.servicio;
 import com.airyance.empleado.modelo.DtoEmpleado;
 import com.airyance.empleado.modelo.Empleado;
 import com.airyance.empleado.puerto.repositorio.RepositorioEmpleado;
+import com.airyance.negocio.excepciones.ExcepcionInconsistenciaDatos;
+import com.airyance.negocio.excepciones.ExcepcionSinDatos;
 
 import java.util.Optional;
 
@@ -27,7 +29,7 @@ public class ServicioActualizarEmpleado {
             if (resultado.isPresent() && resultado.get().getId() == id) {
                 repositorioEmpleado.actualizarEmpleado(empleado, id);
             } else {
-                throw new RuntimeException(LOS_DATOS_DEL_EMPLEADO_A_ACTUALIZAR_SON_INCONSISTENTES);
+                throw new ExcepcionInconsistenciaDatos(LOS_DATOS_DEL_EMPLEADO_A_ACTUALIZAR_SON_INCONSISTENTES);
             }
         } catch (RuntimeException exception) {
             throw new RuntimeException(exception.getMessage(), exception);

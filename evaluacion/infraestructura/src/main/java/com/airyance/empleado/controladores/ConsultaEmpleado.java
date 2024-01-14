@@ -21,7 +21,7 @@ public class ConsultaEmpleado {
     private ManejadorListarEmpleados manejadorListarEmpleados;
 
     @GetMapping(value = "/{cedula}")
-    public Optional<DtoEmpleado> buscarEmpleadoPorCedula(@PathVariable Long cedula) {
+    public Optional<DtoEmpleado> buscarEmpleadoPorCedula(@PathVariable long cedula) {
         return manejadorConsultarEmpleado.ejecutar(cedula);
     }
 
