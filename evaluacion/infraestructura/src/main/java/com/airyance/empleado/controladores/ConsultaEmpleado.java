@@ -21,18 +21,14 @@ public class ConsultaEmpleado {
     private ManejadorListarEmpleados manejadorListarEmpleados;
 
     @GetMapping(value = "/{cedula}")
-    public Optional<DtoEmpleado> buscarEmpleadoPorCedula(@PathVariable int cedula){
+    public Optional<DtoEmpleado> buscarEmpleadoPorCedula(@PathVariable int cedula) {
         return manejadorConsultarEmpleado.ejecutar(cedula);
     }
 
     @GetMapping(value = "/listar")
-    public Optional<List<DtoEmpleado>> listarEmpleados (){
+    public Optional<List<DtoEmpleado>> listarEmpleados() {
         return manejadorListarEmpleados.ejecutar();
     }
-
-
-
-
 
 
 }
