@@ -1,18 +1,11 @@
-# Proyecto Awesome Angular
+# :rocket: Control de empleados JAVA 
 
-Este es un proyecto increíble creado con Angular. ¡Explora, contribuye y hazlo aún más impresionante!
+Este proyecto es desarrollado en SpringBoot 3.2.1, empleando Java 17, Loomok, Spring Data JDBC, Flyway Migration, JDBC API, Base de datos en PostgreSQL, ademas de Gradle.
 
 ## Instalación
 
-Sigue estos pasos para configurar el proyecto localmente:
 
-1. Clona este repositorio: `git clone https://github.com/tuusuario/tuproyecto.git`
-2. Navega al directorio del proyecto: `cd tuproyecto`
-3. Instala las dependencias: `npm install`
 
 ## Uso
 
-Ejecuta el proyecto localmente con el siguiente comando:
 
-```bash
-ng serve
